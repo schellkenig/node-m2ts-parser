@@ -1,0 +1,41 @@
+{
+  "name": "m2ts-parser",
+  "version": "0.0.1",
+  "description": "MPEG-2 TS packet parser.",
+  "homepage": "https://github.com/kanreisa/node-m2ts-parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kanreisa/node-m2ts-parser.git"
+  },
+  "keywords": [
+    "chinachu",
+    "m2ts",
+    "mpegts",
+    "mpeg2ts",
+    "parser",
+    "mpeg",
+    "binary",
+    "packet",
+    "ts"
+  ],
+  "author": {
+    "name": "Yuki KAN",
+    "url": "https://github.com/kanreisa"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/kanreisa/node-m2ts-parser/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/kanreisa/node-m2ts-parser/issues"
+  },
+  "dependencies": {
+    "packet": "0.0.6"
+  }
+}
