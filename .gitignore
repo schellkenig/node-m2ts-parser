@@ -14,3 +14,5 @@ results
 npm-debug.log
 
 node_modules/*
+test/test.m2ts
+test/test*.m2ts
