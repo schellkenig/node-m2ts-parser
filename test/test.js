@@ -27,8 +27,8 @@ reader.on('data', function (packet) {
 	util.puts('PID=' + packet.pid.toString(16) + '(' + (packet.type || '?') + ')');
 	
 	if (packet.payload) {
-		var i, l;
-		var s = '';
+		var i, l, s = '', psi = null;
+		
 		for (i = 0, l = packet.payload.length; i < l; i++) {
 			if (i !== 0 && i % 16 === 0) {
 				s += '\n';
@@ -38,9 +38,13 @@ reader.on('data', function (packet) {
 		}
 		s += '\n';
 		
+		if (packet.type === 'PAT') {
+			psi = m2tsParser.parsePAT(packet.payload);
+		}
+		
 		util.puts(
 			'payload=' + packet.payload.length,
-			util.inspect(m2tsParser.parsePSI(packet.payload)),
+			util.inspect(psi),
 			s
 		);
 	}
